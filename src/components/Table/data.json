@@ -1,0 +1,16 @@
+[
+{
+"type": "changemaslo", "duration": "30d"
+},
+{
+    "type": "clearcar", "duration": "7d"
+},
+{
+    "type": "changefiltr", "duration": "60d"
+},
+{
+    "type": "generaltehoglyad", "duration": "182d"
+}
+
+
+]
