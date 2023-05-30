@@ -24,9 +24,9 @@ export const Button = styled.button
 `margin-top: 20px;
 padding: 15px 25px;
 cursor: pointer
-border-radius: 4px
-border: 1px solid grey;
-background: orange`;
+border-radius: 5px
+border: 1px solid white;
+background: gray`;
 
 export const Container = styled.div`
   display: flex;
@@ -35,7 +35,7 @@ export const Container = styled.div`
   width: 250px;
   margin: 100px auto;
   border: 1px solid black;
-  background-color: grey;
+  background-color: white;
   `;
   export const Label = styled.label`
   font-size: 14px

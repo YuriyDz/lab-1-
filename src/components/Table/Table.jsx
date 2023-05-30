@@ -1,34 +1,42 @@
 import React from 'react';
-import { list, listItem, Item } from './Table.styled';
+import { Item, Button,  Box } from './Table.styled';
 //import  {data} from 'C:/lab-1-/src/components/Table/data.json';
 import propTypes from 'prop-types';
 //import {Table} from './Table.module.css';
 
 //import css from './Board.js';
-export const Tables = ({data}) => {
+export const Tables = ({ cards, onDelete , onChange}) => {
 
     return (      
-<list>
-    {data.map(({ type, duration }) => (
-    <listItem>
-       <Item>{type}: {duration}</Item>
-       </listItem>
+    <Box>    
+<ul>
+    
+    {cards.map(({ id, type, duration }) => (
+        
+    <li key={id}>
+        
+       <Item >type={type}: duration={duration}</Item>
+       <Button type="button" onClick={() => onDelete(id)}>Delete</Button>
+       <Button type="button" onClick={() => onChange(id)}>Change</Button>
+       </li>
     ))}
-       </list> 
-       
+     </ul> 
+       </Box>
 
     );
 }
+
+
+
+
 Tables.propTypes = {
  
-    data: ({
-        type: propTypes.string.isRequired,
+    cards:propTypes.shape ({
+        type: propTypes.number.isRequired,
         duration: propTypes.string.isRequired,
+        id:propTypes.string.isRequired,
        
-    }),
-
-
+   }),
+   onDelete: propTypes.func.isRequired,
 }
-
-
 
