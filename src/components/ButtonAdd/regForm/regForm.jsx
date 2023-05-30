@@ -4,13 +4,14 @@ const SignupForm = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const [carName, setCarName] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = {
       name,
       email,
       password,
+      carName,
     };
     // Отримання API ключа та адреси сервера
     const REACT_APP_API_URL = `https://64752925e607ba4797dbac4f.mockapi.io/api/serv/`
@@ -62,6 +63,15 @@ const SignupForm = () => {
           id="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+        />
+      </div>
+      <div>
+        <label htmlFor="name">Марка автомобіля:</label>
+        <input
+          type="text"
+          id="carName"
+          value={carName}
+          onChange={(e) => setCarName(e.target.value)}
         />
       </div>
       <button type="submit">Створити профіль</button>

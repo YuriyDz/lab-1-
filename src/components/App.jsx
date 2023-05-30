@@ -3,7 +3,7 @@ import {useState, useEffect} from 'react';
 import { nanoid } from 'nanoid';
 import { ToastContainer, toast } from 'react-toastify';
 import  moment  from 'react-moment';
-import SignupForm from './regForm/regForm';
+import SignupForm from './ButtonAdd/regForm/regForm.jsx';
 import 'react-toastify/dist/ReactToastify.css'
 //import  Find from './FinderServise/FinderServise';
 import ContactForm from './ButtonAdd/ButtonAdd.jsx';
@@ -265,7 +265,7 @@ alert(fff.type1.toString());
      
       } 
       componentDidMount(){
-    setInterval(() => this.setState({ realTime: new Date().getSeconds() }), 1000);
+    setInterval(() => this.setState({ realTime: this.state.realTime+1 }), 1000);
       }
     
      // const dateToFormat = '1976-04-19T12:59-0500'; 
@@ -281,7 +281,7 @@ alert(fff.type1.toString());
 render(){     
   if((Number(this.state.realTime)%10) === 0){
 //alert((Number(this.state.realTime)/10).toString());
-    this.Find(new Date().getSeconds());
+    //this.Find(new Date().getSeconds());
   }     
       if(this.state.openHistory ==1){
        
